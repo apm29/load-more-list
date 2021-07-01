@@ -1,5 +1,5 @@
 {
-  "version": "0.0.2",
+  "version": "0.0.5",
   "name": "load-more-list",
   "description": "加载更多列表",
   "author": "apm29",
@@ -14,7 +14,7 @@
   ],
   "files": [
     "dist",
-    "src/packages"
+    "src/components"
   ],
   "homepage": "https://github.com/apm29/load-more-list",
   "bugs": {
