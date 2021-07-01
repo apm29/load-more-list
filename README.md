@@ -91,3 +91,6 @@ export default {
 
 #### 0.0.1: 
 *  引入tailwindcss来处理样式
+
+#### 0.0.2
+*  tailwindcss移到开发依赖
