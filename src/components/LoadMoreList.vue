@@ -21,7 +21,7 @@
         </template>
       </template>
     </slot>
-    <slot v-bind:hasMore="hasMore" v-bind:loading="loading" name="footer">
+    <slot v-bind:hasMore="hasMore" v-bind:clickLoadMore="clickLoadMore" v-bind:loading="loading" name="footer">
       <slot name="loading" v-bind:hasMore="hasMore" v-bind:loading="loading">
         <div class="tw-cursor-wait tw-p-2 tw-text-lg tw-text-gray-400 tw-flex tw-items-center tw-justify-center tw-text-center"
              v-if="loading">
@@ -40,7 +40,7 @@
           {{ noMoreText || '没有更多了' }}
         </div>
       </slot>
-      <slot name="load-more">
+      <slot name="load-more" v-bind:clickLoadMore="clickLoadMore">
         <div
             class="tw-text-sm tw-p-2 tw-cursor-pointer tw-flex tw-justify-center tw-items-center tw-text-gray-400 tw-text-center"
             @click="clickLoadMore"
