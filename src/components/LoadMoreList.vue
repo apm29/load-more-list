@@ -78,6 +78,7 @@ import './index.css'
 import { onMounted, ref, toRefs } from 'vue'
 import { VeilSlideYTransition,VeilScaleTransition } from "veil-transitions"
 import "veil-transitions/src/components/index.css"
+import "./chunked.css"
 export default {
   name: 'LoadMoreList',
   emits: ['load-more'],
