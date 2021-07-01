@@ -1,5 +1,5 @@
 {
-  "version": "0.0.5",
+  "version": "0.0.6",
   "name": "load-more-list",
   "description": "加载更多列表",
   "author": "apm29",
@@ -13,7 +13,7 @@
     "加载更多列表"
   ],
   "files": [
-    "dist",
+    "dist/index.css",
     "src/components"
   ],
   "homepage": "https://github.com/apm29/load-more-list",
@@ -30,13 +30,14 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "veil-transitions": "^0.0.2",
     "vue": "^3.0.5"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.2.3",
     "@vue/compiler-sfc": "^3.0.5",
-    "postcss": "^8.2.10",
     "autoprefixer": "^9",
+    "postcss": "^8.2.10",
     "tailwindcss": "^2.1.1",
     "vite": "^2.3.8"
   }

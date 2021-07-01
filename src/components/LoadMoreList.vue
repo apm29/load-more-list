@@ -23,17 +23,19 @@
     </slot>
     <slot v-bind:hasMore="hasMore" v-bind:clickLoadMore="clickLoadMore" v-bind:loading="loading" name="footer">
       <slot name="loading" v-bind:hasMore="hasMore" v-bind:loading="loading">
-        <div class="tw-cursor-wait tw-p-2 tw-text-lg tw-text-gray-400 tw-flex tw-items-center tw-justify-center tw-text-center"
-             v-if="loading">
-          <div class="tw-animate-spin tw-p-2">
-            <svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"
-                 width="28" height="28">
-              <path
-                  fill="#888"
-                  d="M988 548c-19.9 0-36-16.1-36-36 0-59.4-11.6-117-34.6-171.3a440.45 440.45 0 0 0-94.3-139.9 437.71 437.71 0 0 0-139.9-94.3C629 83.6 571.4 72 512 72c-19.9 0-36-16.1-36-36s16.1-36 36-36c69.1 0 136.2 13.5 199.3 40.3C772.3 66 827 103 874 150c47 47 83.9 101.8 109.7 162.7 26.7 63.1 40.2 130.2 40.2 199.3 0.1 19.9-16 36-35.9 36z"/>
-            </svg>
+        <VeilScaleTransition>
+          <div class="tw-cursor-wait tw-p-2 tw-text-lg tw-text-gray-400 tw-flex tw-items-center tw-justify-center tw-text-center"
+               v-if="loading">
+            <div class="tw-animate-spin tw-p-2">
+              <svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"
+                   width="28" height="28">
+                <path
+                    fill="#888"
+                    d="M988 548c-19.9 0-36-16.1-36-36 0-59.4-11.6-117-34.6-171.3a440.45 440.45 0 0 0-94.3-139.9 437.71 437.71 0 0 0-139.9-94.3C629 83.6 571.4 72 512 72c-19.9 0-36-16.1-36-36s16.1-36 36-36c69.1 0 136.2 13.5 199.3 40.3C772.3 66 827 103 874 150c47 47 83.9 101.8 109.7 162.7 26.7 63.1 40.2 130.2 40.2 199.3 0.1 19.9-16 36-35.9 36z"/>
+              </svg>
+            </div>
           </div>
-        </div>
+        </VeilScaleTransition>
       </slot>
       <slot name="no-more" v-bind:hasMore="hasMore" v-bind:loading="loading">
         <div class="tw-text-sm tw-p-2 tw-text-gray-400 tw-text-center" v-if="!loading && !hasMore">
@@ -74,10 +76,12 @@
 <script>
 import './index.css'
 import { onMounted, ref, toRefs } from 'vue'
-
+import { VeilSlideYTransition,VeilScaleTransition } from "veil-transitions"
+import "veil-transitions/src/components/index.css"
 export default {
   name: 'LoadMoreList',
   emits: ['load-more'],
+  components:{ VeilSlideYTransition,VeilScaleTransition },
   props: {
     //是否有更多列表项
     hasMore: {

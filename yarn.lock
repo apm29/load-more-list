@@ -1161,6 +1161,13 @@ util-deprecate@^1.0.2:
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
   integrity sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=
 
+veil-transitions@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/veil-transitions/-/veil-transitions-0.0.2.tgz#70faf05b8f599be980fd6ce69db57c3d5c508196"
+  integrity sha512-JbesUAK/FlvUw3/CjWMDsJUCfOtQCkDHB237A1/wtx7iQ5j2LWUH8Ap2ydYILm3hxlOBmr1F9hU7vNlYQ8tjIw==
+  dependencies:
+    vue "^3.0.5"
+
 vite@^2.3.8:
   version "2.3.8"
   resolved "https://registry.yarnpkg.com/vite/-/vite-2.3.8.tgz#42e3e03953859fd410e4e6ab3d1cca0aab2adc3c"
