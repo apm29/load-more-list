@@ -15,7 +15,7 @@ yarn add load-more-list
 
 ### import
 ```js
-import LoadMoreList from 'load-more-list';
+import { LoadMoreList } from 'load-more-list';
 export default {
   components:{ LoadMoreList }
 }
